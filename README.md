@@ -1,41 +1,40 @@
-# Planner
-Planner tout-en-un en une seule page web (PWA) : agenda façon alarme, tâches répétées par jours de la semaine, projets Pro/Perso/Création, routines auto-cochées, deep work, bien-être, ménage, achats. Mobile-first, hors ligne, données sur l'appareil. FR/EN.
-# Mon planner
+# Mon planner — version à héberger sur GitHub Pages
 
-Un planner personnel et professionnel **tout-en-un**, pensé pour le téléphone : une seule page web, sans framework, installable comme une application et utilisable **hors ligne**.
+Ce dossier contient ton planner prêt à être mis en ligne (gratuitement) pour le tester sur ton téléphone.
+Tout fonctionne dans **un seul fichier** (`index.html`). Les autres fichiers servent à l'installer comme une application et à l'utiliser **hors ligne**.
 
-## Ce qu'il fait
+## Contenu
 
-- **Agenda** : vue « Aujourd'hui » (score du jour, 3 priorités, tâches, énergie) et frise horaire 6 h–21 h.
-- **À faire** : tâches avec heure de début et de fin, mini-tâches, échéances, alertes, priorités de la semaine.
-- **Planification façon alarme** : cadran pour l'heure, calendrier pour la date, répétition par jours de la semaine (lun–ven, week-end, un ou plusieurs jours).
-- **Projets** : sections Pro, Perso, Création et banque d'idées.
-- **Habits** : routines du matin et du soir qui se cochent automatiquement (3 priorités remplies, 10 min de yoga ou de lecture…), ménage planifié, liste d'achats.
-- **Focus** : sessions de deep work, échecs (contre l'ordinateur ou contre une personne), livres.
-- **ENERGY** : respiration guidée, méditation avec sons d'ambiance, sieste, yoga, repas et eau, jeûne.
-- **Suivi** : bilan de la semaine et statistiques.
-- **Hour One** : planification hebdomadaire guidée en 6 étapes.
-- Verrou de concentration, code de verrouillage, rappels, sauvegarde par fichier.
-- Interface en **français et en anglais**, thèmes clair/sombre et six couleurs.
+| Fichier | Rôle |
+|---|---|
+| `index.html` | le planner |
+| `manifest.webmanifest` + `icons/` | nom, couleurs et icônes de l'application installée |
+| `sw.js` | permet l'utilisation hors ligne (mise en cache) |
+| `.nojekyll` | dit à GitHub de publier les fichiers tels quels |
+| `THIRD_PARTY_NOTICES.md` | licences des composants libres (à garder) |
 
-## Données et confidentialité
+## Mise en ligne en 6 étapes (depuis un ordinateur ou le navigateur du téléphone)
 
-Toutes les données restent **sur ton appareil** (stockage du navigateur). Aucun compte, aucune publicité, aucun suivi. Le dépôt ne contient que le code.
+1. **Décompresse** le fichier ZIP.
+2. Sur [github.com](https://github.com), crée un compte (gratuit) puis **New repository** : donne-lui un nom court (par exemple `planner`), laisse **Public**, puis **Create repository**.
+3. Dans le dépôt : **Add file › Upload files**. Glisse **tous** les fichiers décompressés **et le dossier `icons`** (le fichier `index.html` doit être à la racine, pas dans un sous-dossier). Clique sur **Commit changes**.
+4. Va dans **Settings › Pages**. Sous *Build and deployment*, choisis **Deploy from a branch**, branche **main**, dossier **/(root)**, puis **Save**.
+5. Attends 1 à 3 minutes. L'adresse apparaît en haut de la page : `https://TON-PSEUDO.github.io/NOM-DU-DEPOT/`
+6. Ouvre cette adresse **dans Chrome sur ton téléphone**, puis menu **⋮ › Installer l'application** (ou **Ajouter à l'écran d'accueil**). Elle s'ouvre ensuite en plein écran, comme une vraie application, même sans connexion.
 
-## Installation (GitHub Pages)
+## Mettre à jour plus tard
 
-1. Déposer les fichiers à la racine du dépôt (avec le dossier `icons`).
-2. Settings › Pages › Deploy from a branch › `main` › `/(root)`.
-3. Ouvrir l'adresse dans Chrome, puis ⋮ › **Installer l'application**.
+Dans le dépôt, **Add file › Upload files**, envoie le nouveau `index.html` (et `sw.js` s'il est fourni) : GitHub remplace l'ancien. Ferme puis rouvre l'application **deux fois** pour qu'elle prenne la nouvelle version (à cause du cache hors ligne).
 
-## Technologies
+## À savoir
 
-HTML, CSS et JavaScript pur dans un seul fichier. Moteur d'échecs libre Stockfish.js. Service worker pour le hors-ligne.
+- **Tes données restent sur ton téléphone** (stockage du navigateur). Elles ne sont **pas** envoyées dans le dépôt GitHub : seul le code est public.
+- Cette version est **séparée** de la version ouverte depuis ton compte Claude : les données ne se partagent pas automatiquement. Pour les transférer : dans l'ancienne version, **Réglages › Sauvegardes et e-mail › Télécharger le fichier**, puis dans la nouvelle **Importer un fichier**.
+- Hors de Claude, ces fonctions ne sont **pas disponibles** : la sauvegarde en ligne dans ton compte Claude et la création d'exercices de langue par Claude (le défi « langue » du verrou de concentration). Le défi **échecs** (moteur Stockfish embarqué), les sauvegardes par fichier, le partage, les rappels, les sons et tout le reste fonctionnent.
+- Les **notifications** et le **micro** demandent l'accès HTTPS, que GitHub Pages fournit.
+- Le bouton **« M'offrir un café »** ouvre ta page Ko-fi dans un nouvel onglet.
+- Pour effacer toutes les données du téléphone : paramètres du navigateur › données du site › effacer.
 
 ## Licences
 
-Contient Stockfish.js (GPLv3), voir `THIRD_PARTY_NOTICES.md`.
-
-## Soutenir le projet
-
-☕ [M'offrir un café sur Ko-fi](https://ko-fi.com/anyssasoadirdine)
+Le planner embarque le moteur d'échecs libre **Stockfish.js (GPLv3)** : en publiant ce code dans un dépôt public, tu respectes cette licence. Garde le fichier `THIRD_PARTY_NOTICES.md`.
