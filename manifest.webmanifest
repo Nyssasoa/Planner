@@ -59,14 +59,5 @@
         }
       ]
     }
-  ],
-  "screenshots": [
-    {
-      "src": "screenshots/screen1.png",
-      "sizes": "400x867",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Page d'accueil de Mon Planner"
-    }
   ]
 }
