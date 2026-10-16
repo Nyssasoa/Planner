@@ -1,13 +1,19 @@
 {
-  "name": "Mon Planner",
+  "id": "mon-planner-pwa",
+  "name": "Mon planner",
   "short_name": "Planner",
-  "description": "Un planner unique pour la vie personnelle et professionnelle, 100% hors-ligne et sécurisé.",
-  "start_url": "./index.html",
+  "description": "Planner personnel et professionnel tout-en-un : agenda, routines, projets, focus.",
+  "lang": "fr",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#eef1f8",
   "theme_color": "#3b4cca",
-  "orientation": "portrait",
+  "categories": [
+    "productivity",
+    "lifestyle"
+  ],
   "icons": [
     {
       "src": "icons/icon-192.png",
@@ -26,6 +32,41 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Agenda",
+      "short_name": "Agenda",
+      "description": "Ouvrir l'agenda du jour",
+      "url": "./#agenda",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "À faire",
+      "short_name": "Tâches",
+      "description": "Voir la liste de tâches",
+      "url": "./#afaire",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/screen1.png",
+      "sizes": "400x867",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Page d'accueil de Mon Planner"
     }
   ]
 }
