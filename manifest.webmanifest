@@ -1,14 +1,13 @@
 {
-  "name": "Mon planner",
+  "name": "Mon Planner",
   "short_name": "Planner",
-  "description": "Planner personnel et professionnel tout-en-un : agenda, routines, projets, focus.",
-  "lang": "fr",
-  "start_url": "./",
+  "description": "Un planner unique pour la vie personnelle et professionnelle, 100% hors-ligne et sécurisé.",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "orientation": "portrait",
   "background_color": "#eef1f8",
   "theme_color": "#3b4cca",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "icons/icon-192.png",
